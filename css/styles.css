@@ -637,6 +637,10 @@ border-color:transparent;
   align-items:flex-end;
 }
 
+.submit-icon{
+fill: var(--defult-color);
+margin-left: 10px;
+}
 /* Portfolio */
 
 /* fillter */
