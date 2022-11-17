@@ -591,6 +591,13 @@ color: #FFFFFF;
 .email-form{
   margin-left: auto;
 }
+.email-holder{
+  color:var(--defult-color);
+}
+.email-holder:hover,.email-holder:focus{
+  border-color:var(--accent-color);
+
+}
 .email-box input{
   width: 358px;
   height: 50px;
@@ -599,7 +606,8 @@ color: #FFFFFF;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius:4px;
   padding-left: 16px;
-  
+  outline: 0;
+  transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
 .email-box input::placeholder{
 font-size: 16px;
@@ -623,7 +631,7 @@ text-align: center;
 letter-spacing: 0.06em;
 
 color: #FFFFFF;
-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+box-shadow: 0;
 border-radius: 4px;
 
 width: 200px;
@@ -631,6 +639,10 @@ height: 50px;
 padding-left: 28px;
 margin-left: 12px ;
 border-color:transparent;
+transition: box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.email-button:hover,.email-button:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15)
 }
 .form-horizontal{
   display: flex;
@@ -780,6 +792,14 @@ color: #FFFFFF;
   
   
 }
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  width: 448px;
+  margin: 0 auto;
+}
 .modal-tittle{
 display:flex;
 font-weight: 700;
@@ -793,25 +813,47 @@ justify-content: center;
 margin-top: 2px;
 }
 .modal-form{
+  
   display: flex;
   flex-direction: column;
   margin-top: 12px;
-  margin-left: 40px;
-  margin-right: 40px;
-  margin-bottom: 20px;
+  width: 100%;
+}
+.modal-form label{
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  line-height: 1.16;
+/* identical to box height */
+
+letter-spacing: 0.01em;
+
+color: #757575;
+margin-bottom: 4px;
 }
 .modal-form input{
-  margin-bottom: 20px;
-  border: 1px solid rgba(33, 33, 33, 0.2);
+border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 40px;
+color:var(--second-color);
+outline: 0;
+transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
 }
+
 .modal-form textarea{
-   margin-bottom: 20px;
+ 
   border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 130px;
 resize: none;
+outline: 0;
+transition: border-color 250ms cubic-bezier(0.4,0,0.2,1);
+}
+
+
+
+.form-input{
+  padding-left: 42px;
 }
 .modal-form textarea::placeholder{
   font-size: 12px;
@@ -822,11 +864,32 @@ padding: 12px 16px;
 color: rgba(117, 117, 117, 0.5);
 }
 .contract{
+  margin-top: 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
 }
+.contract p{
+  display:inline-flex;
+  margin: 0;
+  padding: 0;
+font-size: 14px;
+line-height: 1.71;
+/* identical to box height, or 171% */
+
+letter-spacing: 0.03em;
+
+color: #757575;
+
+}
 .checkbox{
+  display: block;
+  margin: 0;
   margin-right: 7px;
+}
+.contract-file{
+  color:var(--accent-color);
+  text-decoration: underline;
 }
 
 .backdrop.is-hidden {
@@ -871,5 +934,66 @@ color: rgba(117, 117, 117, 0.5);
 .modal-icon{
 
   fill: #000000;
+  transition:fill 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.modal-button:hover .modal-icon,.modal-button:focus .modal-icon{
+  fill:var(--accent-color);
 }
 
+.button-send{
+
+justify-content: center;
+width: 200px;
+height: 50px;
+margin-top: 30px;
+border-color:transparent;
+background-color:var(--accent-color);
+border-radius: 4px;
+font-weight: 700;
+font-size: 16px;
+line-height: 1.87;
+
+letter-spacing: 0.06em;
+
+color: #FFFFFF;
+box-shadow:0;
+transition:box-shadow 250ms cubic-bezier(0.4,0,0.2,1);
+}
+.button-send:hover,.button-send:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.form-field{
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.form-icon{
+  position: absolute;
+  top:0;
+  left:0;
+  transform: translateY(50%);
+  margin-left: 12px;
+  fill: var(--second-color);
+  transition:fill 250ms cubic-bezier(0.4,0,0.2,1);
+   
+}
+.form-field .form-area{
+  padding-left:16px;
+}
+
+.form-input:hover,.form-input:focus{
+  border-color:var(--accent-color);
+}
+
+.form-input:hover + .form-icon,.form-input:focus + .form-icon{
+  fill: var(--accent-color);
+}
+
+.form-area:hover,.form-area:focus{
+  border-color:var(--accent-color);
+}
