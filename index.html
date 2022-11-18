@@ -475,16 +475,16 @@
         <div class="modal-container">
           <b class="modal-tittle">Залиште свої дані, ми вам передзвонимо</b>
           <form class="modal-form">
-            <label for="email">Пошта</label>
+            <label for="name">Ім'я</label>
             <div class="form-field">
-              <input type="email" class="form-input" name="email" id="email" />
+              <input type="text" class="form-input" name="name" id="name" />
               <svg width="18" height="18" class="form-icon">
                 <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
               </svg>
             </div>
-            <label for="email">Пошта</label>
+            <label for="tel">Телефон</label>
             <div class="form-field">
-              <input type="email" class="form-input" name="email" id="email" />
+              <input type="tel" class="form-input" name="tel" id="tel" />
               <svg width="18" height="18" class="form-icon">
                 <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
               </svg>
@@ -498,8 +498,6 @@
             </div>
             <label for="comment">Коментар</label>
             <textarea
-              cols="30"
-              rows="10"
               class="form-area"
               placeholder="Введіть текст"
               name="comment"
@@ -507,11 +505,11 @@
             ></textarea>
           </form>
           <label class="contract">
-            <input type="checkbox" class="checkbox" />
-            <span class="contract-icon"></span>
-            <!-- <svg width="16" height="15" class="checkbox-icon">
-              <use href="./images/icons.svg#icon-check"></use>
-            </svg> -->
+            <input type="checkbox" class="checkbox visually-hidden" />
+
+            <svg class="contract-icon-mark" width="13" height="9">
+              <use href="./images/icons.svg#icon-Vector"></use>
+            </svg>
             <p>
               <span>
                 Погоджуюся з розсилкою та приймаю
