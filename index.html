@@ -474,7 +474,7 @@
         </button>
         <div class="modal-container">
           <b class="modal-tittle">Залиште свої дані, ми вам передзвонимо</b>
-          <form class="modal-form">
+          <form class="modal-form js-speaker-form">
             <label for="name">Ім'я</label>
             <div class="form-field">
               <input type="text" class="form-input" name="name" id="name" />
@@ -503,24 +503,36 @@
               name="comment"
               id="comment"
             ></textarea>
-          </form>
-          <label class="contract">
-            <input type="checkbox" class="checkbox visually-hidden" />
 
-            <svg class="contract-icon-mark" width="13" height="9">
-              <use href="./images/icons.svg#icon-Vector"></use>
-            </svg>
-            <p>
-              <span>
-                Погоджуюся з розсилкою та приймаю
-                <a href="" class="contract-file"> Умови договору</a></span
-              >
-            </p>
-          </label>
-          <button type="submit" class="button-send">Відправити</button>
+            <label class="contract">
+              <input type="checkbox" class="checkbox visually-hidden" required />
+
+              <svg class="contract-icon-mark" width="13" height="9">
+                <use href="./images/icons.svg#icon-Vector"></use>
+              </svg>
+              <p>
+                <span>
+                  Погоджуюся з розсилкою та приймаю
+                  <a href="" class="contract-file"> Умови договору</a></span
+                >
+              </p>
+            </label>
+            <button type="submit" class="button-send">Відправити</button>
+          </form>
         </div>
       </div>
     </div>
+    <script>
+      (() => {
+        document.querySelector('.js-speaker-form').addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
